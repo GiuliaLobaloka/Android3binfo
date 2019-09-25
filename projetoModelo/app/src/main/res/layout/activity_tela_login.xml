@@ -7,36 +7,54 @@
     tools:context=".telaLogin">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="453dp" />
+        android:layout_marginStart="37dp"
+        android:text="Cadastrar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSair"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="445dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="148dp"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCadastrar" />
 
-    <TextView
-        android:id="@+id/Login"
+    <Button
+        android:id="@+id/btnLogar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="245dp" />
+        android:layout_marginStart="24dp"
+        android:text="Logar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSair"
+        app:layout_constraintStart_toEndOf="@+id/btnSair" />
 
     <EditText
-        android:id="@+id/ctSenha"
+        android:id="@+id/edtUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
         android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="342dp" />
+        android:hint="Usuário ou Email"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
